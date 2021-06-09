@@ -12,6 +12,7 @@ sales.head()
 
 # Built in Datasets in Seaborn i.e tips, iris, titanic etc
 sns.get_dataset_names()
+sns.load_dataset('tips')
 
 # Seaborn Version 
 sns.__version__
@@ -52,3 +53,13 @@ sns.catplot(x="Product Category", y="Sales", data=sales, kind='point', hue='Ship
 sns.catplot(x="Product Category", y="Sales", data=sales, kind='point', hue='Ship Mode')
 sns.catplot(x="Product Category", y="Sales", data=sales, kind='point', hue='Ship Mode', col='Customer Segment')
 sns.catplot(x="Product Category", y="Sales", data=sales, kind='point', hue='Ship Mode', row='Customer Segment')
+
+# Jointplot
+sns.jointplot('Sales','Profit', data=sales)
+sns.jointplot(x='Sales',y='Discount', data=sales)
+sns.jointplot(x='Sales',y='Discount', data=sales, kind='hex')
+sns.jointplot(x='Sales',y='Discount', data=sales, kind='kde')
+
+# Pairplot
+sns.pairplot(sales)
+sns.pairplot(sales, hue='Ship Mode')
