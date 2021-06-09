@@ -7,8 +7,17 @@ xls   = pd.ExcelFile('sales.xls')
 sales = pd.read_excel(xls, 'Orders')
 sales.head()
 
+sales = pd.read_csv('sales.csv')
+sales.head()
+
 # Built in Datasets in Seaborn i.e tips, iris, titanic etc
 sns.get_dataset_names()
+
+# Seaborn Version 
+sns.__version__
+
+# Seaborn Verion Update or Upgrade
+pip install seaborn --upgrade
 
 # Relplot
 sns.relplot(x='Sales', y='Profit', data = sales)
@@ -28,3 +37,18 @@ sns.relplot(x='Order Date', y='Sales', data=sales, kind='line', ci=None)
 sns.relplot(x='Order Date', y='Sales', data=sales, kind='line', ci='std')
 sns.relplot(x='Order Date', y='Sales', data=sales, kind='line', estimator = None)
 sns.relplot(x='Order Date', y='Sales', data=sales, kind='line', estimator = sum)
+
+# Barplot
+sns.catplot(x="Product Category", y="Sales", data=sales, kind='bar')
+sns.catplot(x="Product Category", y="Sales", data=sales, kind='bar', hue='Ship Mode')
+sns.catplot(x="Product Category", y="Sales", data=sales, kind='bar', hue='Ship Mode')
+sns.catplot(x="Product Category", y="Sales", data=sales, kind='bar', hue='Ship Mode', col='Customer Segment')
+sns.catplot(x="Product Category", y="Sales", data=sales, kind='bar', hue='Ship Mode', row='Customer Segment')
+
+
+# Pointplot
+sns.catplot(x="Product Category", y="Sales", data=sales, kind='point')
+sns.catplot(x="Product Category", y="Sales", data=sales, kind='point', hue='Ship Mode')
+sns.catplot(x="Product Category", y="Sales", data=sales, kind='point', hue='Ship Mode')
+sns.catplot(x="Product Category", y="Sales", data=sales, kind='point', hue='Ship Mode', col='Customer Segment')
+sns.catplot(x="Product Category", y="Sales", data=sales, kind='point', hue='Ship Mode', row='Customer Segment')
