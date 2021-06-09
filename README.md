@@ -12,17 +12,17 @@ Seaborn is an amazing data visualization library for statistical graphics plotti
 - Seaborn Color Palette
 - Seaborn’s plotting functions
 - Plotting with the relplot function
-  -- Histogram
-  -- Bar Plot
-  -- Count Plot
-  -- Point Plot
-  -- Joint Plot
-  -- Regplot
-  -- Lm Plot
-  -- KDE Plot
-  -- Box Plot
-  -- Violin Plot
-  -- Heatmap
-  -- Cluster map
-  -- Facetgrid
-  -- Pair Plot
+  - Histogram
+  - Bar Plot
+  - Count Plot
+  - Point Plot
+  - Joint Plot
+  - Regplot
+  - Lm Plot
+  - KDE Plot
+  - Box Plot
+  - Violin Plot
+  - Heatmap
+  - Cluster map
+  - Facetgrid
+  - Pair Plot
