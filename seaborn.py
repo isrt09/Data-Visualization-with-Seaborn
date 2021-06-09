@@ -46,6 +46,10 @@ sns.catplot(x="Product Category", y="Sales", data=sales, kind='bar', hue='Ship M
 sns.catplot(x="Product Category", y="Sales", data=sales, kind='bar', hue='Ship Mode', col='Customer Segment')
 sns.catplot(x="Product Category", y="Sales", data=sales, kind='bar', hue='Ship Mode', row='Customer Segment')
 
+# Violinplot
+sns.catplot(x='Product Category', y="Shipping Cost", data=sales, kind='violin')
+sns.catplot(x='Product Category', y="Shipping Cost", data=sales, kind='violin', hue='Ship Mode')
+sns.catplot(x='Product Category', y="Shipping Cost", data=sales, kind='violin', hue='Ship Mode', inner='stick')
 
 # Pointplot
 sns.catplot(x="Product Category", y="Sales", data=sales, kind='point')
